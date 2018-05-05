@@ -1,5 +1,6 @@
 <?php
-$conn = mysqli_connect('localhost', 'root','', 'cms');
+require_once('config.php');
+$conn = mysqli_connect(host, user,pass, db);
 
 if (!empty($_POST) && !empty($_GET['id'])){
   $id = $_GET['id'];

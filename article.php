@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 $id = $_GET['id'];
  ?>
 
@@ -11,7 +12,7 @@ $id = $_GET['id'];
   <a href="./index.php">Retour à l'index</a><br /><br />
   <?php
   if (isset($_GET['id'])){
-  $conn = mysqli_connect('localhost', 'root','', 'cms');
+  $conn = mysqli_connect(host, user,pass, db);
 
   $sql = "SELECT * FROM articles WHERE ID = '$id'";
   $result = mysqli_query($conn, $sql);

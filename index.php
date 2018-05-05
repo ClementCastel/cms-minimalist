@@ -5,7 +5,8 @@
 </head>
 <body>
   <?php
-  $conn = mysqli_connect('localhost', 'root','', 'cms');
+  require_once('config.php');
+  $conn = mysqli_connect(host, user,pass, db);
 
   $sql = "SELECT * FROM articles";
   $result = mysqli_query($conn, $sql);

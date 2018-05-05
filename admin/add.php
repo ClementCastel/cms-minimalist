@@ -1,6 +1,6 @@
 <?php
-
-$conn = mysqli_connect('localhost', 'root','', 'cms'); //connection à la base de données
+require_once('config.php');
+$conn = mysqli_connect(host, user,pass, db); //connection à la base de données
 
 if (isset($_POST['submit'])){ //vérification que le formulaire a bien été envoyé
 
